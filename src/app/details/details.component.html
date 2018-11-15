@@ -1,6 +1,6 @@
-<app-card>
-  <app-sub-comp></app-sub-comp>
+<app-card [key]="sub1" (save1Triggered)="save1Triggerred()" (cancel1Triggered)="cancel1Triggered()">
+  <app-sub-comp #sub1></app-sub-comp>
 </app-card>
-<app-card>
-  <app-sub-comp-two></app-sub-comp-two>
+<app-card [key]="sub2" (save1Triggered)="save1Triggerred()" (cancel1Triggered)="cancel1Triggered()">
+  <app-sub-comp-two #sub2></app-sub-comp-two>
 </app-card>

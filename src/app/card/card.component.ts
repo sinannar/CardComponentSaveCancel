@@ -7,14 +7,14 @@ import { BaseComponent } from '../base-component/base-component.component';
 })
 export class CardComponent {
   @ViewChild('content') subcomponent: BaseComponent;
-  @Output() save1Triggered: EventEmitter<any>;
-  @Output() cancel1Triggered: EventEmitter<any>;
-
+  @Output() save1Triggered = new  EventEmitter<string>();
+  @Output() cancel1Triggered = new  EventEmitter<string>();
+  @Input() key: string;
   Save1() {
-    this.save1Triggered.emit();
+    this.save1Triggered.emit(this.key);
   }
   Cancel1() {
-    this.cancel1Triggered.emit();
+    this.cancel1Triggered.emit(this.key);
   }
   Save2() {
     this.subcomponent.Save();
