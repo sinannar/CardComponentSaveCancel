@@ -8,15 +8,18 @@ import { SubTwoComponent } from '../sub-comp-two/sub-comp-two.component';
 export class DetailsComponent {
   @ViewChild('sub1') sub1: SubComponent;
   @ViewChild('sub2') sub2: SubTwoComponent;
+
   save1Triggerred($event) {
-    console.log($event);
+    console.log('DetailsComponent ' + $event);
     if ($event === 'sub1') {
       this.sub1.Save();
     } else if ($event === 'sub2') {
       this.sub2.Save();
     }
   }
+
   cancel1Triggered($event) {
+    console.log('DetailsComponent ' + $event);
     if ($event === 'sub1') {
       this.sub1.Cancel();
     } else if ($event === 'sub2') {

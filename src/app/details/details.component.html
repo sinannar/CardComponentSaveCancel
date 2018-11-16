@@ -1,6 +1,6 @@
-<app-card [key]="sub1" (save1Triggered)="save1Triggerred()" (cancel1Triggered)="cancel1Triggered()">
+<app-card [key]="'sub1'" (save1Triggered)="save1Triggerred($event)" (cancel1Triggered)="cancel1Triggered($event)">
   <app-sub-comp #sub1></app-sub-comp>
 </app-card>
-<app-card [key]="sub2" (save1Triggered)="save1Triggerred()" (cancel1Triggered)="cancel1Triggered()">
+<app-card [key]="'sub2'" (save1Triggered)="save1Triggerred($event)" (cancel1Triggered)="cancel1Triggered($event)">
   <app-sub-comp-two #sub2></app-sub-comp-two>
 </app-card>
